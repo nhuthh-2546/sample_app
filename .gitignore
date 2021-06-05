@@ -72,3 +72,5 @@ yarn-debug.log*
 .framgia-ci-result.temp.yml
 
 db/test.* 
+
+test/controllers/static_pages_controller_test.rb
