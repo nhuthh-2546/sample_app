@@ -73,4 +73,4 @@ yarn-debug.log*
 
 db/test.* 
 
-test/controllers/static_pages_controller_test.rb
+test/**
