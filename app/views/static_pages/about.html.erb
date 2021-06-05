@@ -1,0 +1,16 @@
+<%  title = t "about.title"
+    provide(:title, title) 
+%>
+
+<h1><%= t "about.title"%></h1>
+<p>
+  <%= t "about.bf_title_link_overview"%> <%= link_to (t "about.title_link_overview"),"https://www.railstutorial.org/" %>, 
+  <%= t "about.af_title_link_overview"%>
+  <%= link_to (t "about.title_link_learn_enough"), "https://www.learnenough.com/" %> 
+  <%= t "about.des_link_learn_enough"%>
+  <%= link_to (t "about.title_link_book") ,"https://www.railstutorial.org/book" %> <%= t "about.des_link_book"%>
+  <%= link_to (t "about.title_link_screencast"), "https://screencasts.railstutorial.org/" %>
+  <%= t "about.des_link_creencast" %>
+  <%= link_to (t "about.title_link_tutorial") , "https://rubyonrails.org/" %>.
+  <%= t "about.des_link_tutorial" %>
+</p>
