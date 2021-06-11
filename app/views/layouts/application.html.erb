@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title)%> | <%= t "common.title" %></title>
+    <title><%= yield(:title)%><%= t "common.title" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,8 +9,12 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
-
+  <%= render "layouts/slim" %>
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+      <div class="container">
+        <%= yield %>
+      </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>

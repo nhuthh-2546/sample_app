@@ -1,4 +1,9 @@
 en:
+  header:
+    link_home: "Home"
+    link_help: "Help"
+    link_login: "Log in"
+    link_root: "sample app"
   common:
     title: "Ruby on Rails Tutorial Sample App"
   about:
@@ -26,7 +31,19 @@ en:
     title_link_book: "Ruby on Rails Tutorial book"
   home:
     title: "Home"
-    main_title: "Sample App"
+    main_title: "Welcome to the Sample App"
     bf_title_link: "This is the home page for the"
     title_link: "Ruby on Rails Tutorial"
     af_title_link: "sample application."
+    sign_up_link: "Sign up now!"
+  footer:
+    title_link_tutorial: "Ruby on Rails Tutorial"
+    des_link_tutorial: "The"
+    title_link_michael_hartl: "Michael Hartl"
+    des_link_michael_hartl: "by"
+    link_news: "News"
+    link_about: "About"
+    link_contact: "Contact"
+  singup:
+    title: "Sign up"
+    des: "This will be a signup page for new users."

@@ -1,8 +1,8 @@
 <%  title = t "contact.title"
-    provide(:title, title) 
+    provide(:title, "#{title} | ") 
 %>
 <h1><%= t "contact.title" %></h1>
 <p>
   <%= t "contact.des_link" %>
-  <%= link_to (t "contact.title_link"), "https://www.railstutorial.org/contact" %>.
+  <%= link_to t("contact.title_link"), "https://www.railstutorial.org/contact" %>.
 </p>

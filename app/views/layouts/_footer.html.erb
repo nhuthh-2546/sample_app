@@ -1,0 +1,15 @@
+<footer class="footer">
+  <small>
+    <%= t "footer.des_link_tutorial" %> 
+    <%= link_to t("footer.title_link_tutorial"), "https://www.railstutorial.org/" %>
+    <%= t "footer.des_link_michael_hartl" %>
+    <%= link_to t("footer.title_link_michael_hartl"), "https://www.michaelhartl.com/" %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("footer.link_about"), about_path %></li>
+      <li><%= link_to t("footer.link_contact"), contact_path %></li>
+      <li><%= link_to t("footer.link_news"), "https://news.railstutorial.org/" %></li>
+    </ul>
+  </nav>
+</footer>
