@@ -2,9 +2,9 @@ source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 gem "bcrypt", "3.1.13"
-gem "config"
 gem "bootsnap", "1.7.2", require: false
 gem "bootstrap-sass", "3.4.1"
+gem "config"
 gem "jbuilder", "2.10.0"
 gem "puma", "5.3.1"
 gem "rails", "6.1.3.2"
