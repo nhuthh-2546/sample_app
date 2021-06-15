@@ -1,5 +1,20 @@
 <%  title = t "signup.title"
     provide(:title, title) 
 %>
-<h1><%= t "singup.title" %></h1>
-<p><%= t "singup.des" %></p>
+<h1><%= t "signup.title" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= render "shared/error_messages" %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "shared/error_messages" %>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "shared/error_messages" %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "shared/error_messages" %>
+      <%= f.label :password_confirmation, t("signup.confirm_password") %>
+      <%= f.password_field :password_confirmation, class: "shared/error_messages" %>
+      <%= f.submit t("signup.submit_button"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

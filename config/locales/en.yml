@@ -44,6 +44,13 @@ en:
     link_news: "News"
     link_about: "About"
     link_contact: "Contact"
-  singup:
+  signup:
     title: "Sign up"
     des: "This will be a signup page for new users."
+    submit_button: "Create my account"
+    confirm_password: "Confirmation"
+  error_message:
+    count_error: "The form contains "
+    error: "error"
+  flash:
+    signup_success: "Welcome to the Sample App"
