@@ -8,7 +8,7 @@ module SessionsHelper
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by(id: user_id)
-      if user&.authenticated?(cookies[:remember_token])
+      if user&.authenticated?(:remember,cookies[:remember_token])
         log_in user
         @current_user = user
       end
@@ -52,5 +52,15 @@ module SessionsHelper
 
   def admin? user
     current_user.admin? && !current_user?(user)
+  end
+
+  def user_not_found
+    render file: Rails.root.join("public", "404.html"), layout: false, status:
+                                                        :not_found
+  end
+
+  def load_user
+    @user = User.find_by(id: params[:id])
+    user_not_found and return unless @user
   end
 end

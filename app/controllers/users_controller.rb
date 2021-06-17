@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: [:create, :new]
   before_action :load_user, except: [:create, :new, :index]
+  before_action :user_actived
   before_action :correct_user, only: [:edit, :update, :show]
   before_action :admin_user, only: [:destroy]
 
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page], per_page:
+    @users = User.active.paginate(page: params[:page], per_page:
                           Settings.user.per_page)
   end
 
@@ -27,9 +28,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = t "flash.signup_success"
-      redirect_to @user
+      UserMailer.send_activation_email
+      flash[:info] = t "email.info_email"
+      redirect_to root_url
     else
       render :new
     end
@@ -53,11 +54,6 @@ class UsersController < ApplicationController
           .permit(:name, :email, :password, :password_confirmation)
   end
 
-  def user_not_found
-    render file: Rails.root.join("public", "404.html"), layout: false, status:
-                                                        :not_found
-  end
-
   def logged_in_user
     return if logged_in?
 
@@ -74,10 +70,7 @@ class UsersController < ApplicationController
     redirect_to(root_url) unless current_user.admin?
   end
 
-  def load_user
-    @user = User.find_by(id: params[:id])
-    return if @user
-
-    user_not_found
+  def user_actived
+    redirect_to root_url and return unless @user.actived
   end
 end
