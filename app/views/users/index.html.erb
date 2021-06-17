@@ -1,0 +1,12 @@
+<%  title = t "index.title"
+    provide(:title, title) 
+%>
+<h1><%= t "index.title" %></h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= will_paginate %>
