@@ -7,10 +7,11 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     return if @user
 
-    render :file => "#{Rails.root}/public/404.html",  layout: false, status: :not_found
+    render file: Rails.root.join("public", "404.html"), layout: false, status:
+                                                        :not_found
   end
 
-  def create 
+  def create
     @user = User.new(user_params)
     if @user.save
       log_in @user
@@ -24,6 +25,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user)
+          .permit(:name, :email, :password, :password_confirmation)
   end
 end
