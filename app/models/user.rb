@@ -10,14 +10,15 @@ class User < ApplicationRecord
                     format: {with: VALID_EMAIL_REGEX},
                     uniqueness: true
   validates :password, presence: true,
-            length: {minimum: Settings.user.min_password}
+            length: {minimum: Settings.user.min_password},
+            allow_nil: true
   has_secure_password
 
   def remember
     self.remember_token = User.new_token
     update_column(:remember_digest, User.digest(remember_token))
   end
- 
+
   def authenticated? remember_token
     return false unless remember_digest
 

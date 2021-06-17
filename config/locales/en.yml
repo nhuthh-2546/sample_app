@@ -60,9 +60,23 @@ en:
   flash:
     signup_success: "Welcome to the Sample App"
     sign_in_fail: "Invalid email/password combination"
+    update_profile_success: "Profile updated"
+    not_log_in: "Please log in."
+    delete_user_success: "User deleted"
+    delete_user_fail: "User delete fail"
   login:
     link_sign_up: "Sign up now!"
     title_link_sign_up: "New user? "
     btn_login: "Log in"
     title: "Log in"
     remember_me: "Remember me on this computer"
+  edit_user:
+    update_avatar_btn: "Change"
+    title: "Edit user"
+    title_header: "Update your profile"
+    title_btn: "Save changes"
+  index:
+    title: "All users"
+  form:
+    link_delete: "delete"
+    confirm: "You sure?"
