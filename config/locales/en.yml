@@ -54,6 +54,7 @@ en:
     des: "This will be a signup page for new users."
     submit_button: "Create my account"
     confirm_password: "Confirmation"
+    account_inactive: "Account not activated.Check your email for the activation link."
   error_message:
     count_error: "The form contains "
     error: "error"
@@ -64,6 +65,8 @@ en:
     not_log_in: "Please log in."
     delete_user_success: "User deleted"
     delete_user_fail: "User delete fail"
+    account_active_success: "Account activated!"
+    account_active_fail: "Invalid activation link"
   login:
     link_sign_up: "Sign up now!"
     title_link_sign_up: "New user? "
@@ -80,3 +83,10 @@ en:
   form:
     link_delete: "delete"
     confirm: "You sure?"
+  email:
+    info_email: "Please check your email to activate your account."
+    title: "Sample App"
+    greeting: "Hi"
+    des: "Welcome to the Sample App! Click on the link below to activate your account:"
+    title_link: "Activate"
+    subject: "Account activation"
