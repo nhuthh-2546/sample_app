@@ -67,6 +67,11 @@ en:
     delete_user_fail: "User delete fail"
     account_active_success: "Account activated!"
     account_active_fail: "Invalid activation link"
+    password_reset_expired: "Password reset has expired."
+    password_reset_success: "Password has been reset"
+    password_can_not_empty: "Can't be empty"
+    email_not_found: "Email address not found"
+    send_email_success: "Email sent with password reset instructions"
   login:
     link_sign_up: "Sign up now!"
     title_link_sign_up: "New user? "
@@ -89,4 +94,20 @@ en:
     greeting: "Hi"
     des: "Welcome to the Sample App! Click on the link below to activate your account:"
     title_link: "Activate"
-    subject: "Account activation"
+    subject_account_activation: "Account activation"
+    subject_password_reset: "Password reset"
+    title_email_reset_password: "Password reset"
+    link_reset_password: "Reset password"
+    title_link_reset_password: "To reset your password click the link below:"
+    time_expired_reset_password: "This link will expire in two hours."
+    notification_reset_password:
+      "If you did not request your password to be reset, please ignore this email and
+      your password will stay as it is."
+  forgot_password:
+    title: "Forgot password"
+    title_btn: "Submit"
+    link_forgot_password: "(forgot password)"
+  reset_password:
+    title: "Reset password"
+    title_btn: "Update password"
+    title_confirm: "Confirmation"

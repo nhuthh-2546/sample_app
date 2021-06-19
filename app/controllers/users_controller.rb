@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: [:create, :new]
   before_action :load_user, except: [:create, :new, :index]
-  before_action :user_actived
+  before_action :user_actived, except: [:new, :create, :index]  
   before_action :correct_user, only: [:edit, :update, :show]
   before_action :admin_user, only: [:destroy]
 
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      UserMailer.send_activation_email
+      @user.send_activation_email
       flash[:info] = t "email.info_email"
       redirect_to root_url
     else
